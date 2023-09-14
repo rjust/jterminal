@@ -1,0 +1,16 @@
+diff --git a/pom.xml b/pom.xml
+index c4cb262..5cc64c3 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -61,6 +61,11 @@
+         <configuration>
+           <source>1.6</source>
+           <target>1.6</target>
++          <compilerArgs>
++            <arg>-classpath</arg>
++            <arg>${basedir}/major/lib/major.jar</arg>
++            <arg>-Xplugin:MajorPlugin mml:${basedir}/major/mml/all.mml.bin export.mutants</arg>
++          </compilerArgs>
+         </configuration>
+       </plugin>
+     </plugins>
